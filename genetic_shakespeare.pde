@@ -1,8 +1,14 @@
-DNA[] population = new DNA[100];
+String target = "to be or not to be";
+float mutationRate = 0.01;
+int totalPopulation = 100;
+
+DNA[] population;
 ArrayList<DNA> matingPool = new ArrayList<DNA>();
 
 void setup() {
   size(800, 800);
+
+  population = new DNA[totalPopulation];
   for (int i = 0; i < population.length; i++) {
     population[i] = new DNA();
   }

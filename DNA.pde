@@ -1,8 +1,6 @@
 class DNA {
-  String target = "to be or not to be";
   char[] genes = new char[18];
-  float mutationRate = 0.01;
-
+  
   DNA() {
     for (int i = 0; i < genes.length; i++) {
       genes[i] = (char) random(32,128);
