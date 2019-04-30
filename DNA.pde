@@ -1,7 +1,9 @@
 class DNA {
   char[] genes = new char[18];
+  float mutationRate;
   
-  DNA() {
+  DNA(float mutationRate) {
+    this.mutationRate = mutationRate;
     for (int i = 0; i < genes.length; i++) {
       genes[i] = (char) random(32,128);
     }
@@ -18,7 +20,7 @@ class DNA {
   }
 
   DNA crossover(DNA partner) {
-    DNA child = new DNA();
+    DNA child = new DNA(mutationRate);
     
     int coinFace;
     for (int i = 0; i < genes.length; i++) {
