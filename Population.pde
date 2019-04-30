@@ -48,4 +48,12 @@ class Population {
     }
     return bestDNA;
   }
+
+  float getAverageFitness() {
+    float totalFitness = 0;
+    for (DNA dna : population) {
+      totalFitness += dna.fitness();
+    }
+    return totalFitness / population.length;
+  }
 }

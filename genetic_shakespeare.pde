@@ -18,4 +18,5 @@ void draw() {
   }
   text(bestDNA.getPhrase(), 10, 10);
   text(Integer.toString(population.generations), 10, 20);
+  text(String.valueOf(population.getAverageFitness()), 10, 30);
 }
