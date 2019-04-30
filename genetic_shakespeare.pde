@@ -18,6 +18,9 @@ void draw() {
   text(String.valueOf(population.getAverageFitness()), 10, 30);
   text(String.valueOf(totalPopulation), 10, 40);
   text(String.valueOf(mutationRate), 10, 50);
+  for (int i = 0; i < population.population.length; i++) {
+    text(population.population[i].getPhrase(), 10, 10 * i + 60);
+  }
 
   population.cyclePopulation();
   if ((frameCount % 30) == 0) {
