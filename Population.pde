@@ -20,7 +20,7 @@ class Population {
     }
 
     for (int i = 0; i < population.length; i++) {
-      int parentAIndex = int(random(matingPool.size()));
+      int parentAIndex = int(random(matingPool.size() - 1));
 
       ArrayList<Integer> parentBPossibleIndices = new ArrayList<Integer>(); 
       parentBPossibleIndices.add(int(random(parentAIndex)));
@@ -35,5 +35,15 @@ class Population {
 
       population[i] = child;
     }
+  }
+
+  DNA getBestDNA() {
+    DNA bestDNA = population[0];
+    for (DNA dna : population) {
+      if (dna.fitness() > bestDNA.fitness()) {
+        bestDNA = dna;
+      }
+    }
+    return bestDNA;
   }
 }

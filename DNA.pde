@@ -39,4 +39,8 @@ class DNA {
       }
     }
   }
+
+  String getPhrase() {
+    return new String(genes);
+  }
 }
