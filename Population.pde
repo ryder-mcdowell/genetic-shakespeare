@@ -1,5 +1,6 @@
 class Population {
   DNA[] population;
+  int generations;
 
   Population(int totalPopulation, float mutationRate) {
     population = new DNA[totalPopulation];
@@ -35,6 +36,7 @@ class Population {
 
       population[i] = child;
     }
+    ++generations;
   }
 
   DNA getBestDNA() {

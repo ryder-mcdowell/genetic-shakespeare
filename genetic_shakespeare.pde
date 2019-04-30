@@ -17,4 +17,5 @@ void draw() {
     bestDNA = population.getBestDNA();
   }
   text(bestDNA.getPhrase(), 10, 10);
+  text(Integer.toString(population.generations), 10, 20);
 }
