@@ -12,11 +12,15 @@ void setup() {
 
 void draw() {
   background(25);
+
+  text(bestDNA.getPhrase(), 10, 10);
+  text(Integer.toString(population.generations), 10, 20);
+  text(String.valueOf(population.getAverageFitness()), 10, 30);
+  text(String.valueOf(totalPopulation), 10, 40);
+  text(String.valueOf(mutationRate), 10, 50);
+
   population.cyclePopulation();
   if ((frameCount % 30) == 0) {
     bestDNA = population.getBestDNA();
   }
-  text(bestDNA.getPhrase(), 10, 10);
-  text(Integer.toString(population.generations), 10, 20);
-  text(String.valueOf(population.getAverageFitness()), 10, 30);
 }
