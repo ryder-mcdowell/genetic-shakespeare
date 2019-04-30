@@ -18,7 +18,7 @@ void setup() {
 
   ArrayList<Integer> parentBPossibleIndices = new ArrayList<Integer>(); 
   parentBPossibleIndices.add(int(random(parentAIndex)));
-  parentBPossibleIndices.add(int(random(parentAIndex, matingPool.size())));
+  parentBPossibleIndices.add(int(random(parentAIndex + 1, matingPool.size())));
   int parentBIndex = parentBPossibleIndices.get(int(random(0, parentBPossibleIndices.size())));
 
   DNA parentA = matingPool.get(parentAIndex);
