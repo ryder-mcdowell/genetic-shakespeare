@@ -17,3 +17,17 @@ class DNA {
     }
     return float(score) / target.length();
   }
+
+  DNA crossover(DNA partner) {
+    DNA child = new DNA();
+    
+    int coinFace;
+    for (int i = 0; i < genes.length; i++) {
+      coinFace = int(random(2));
+      if (coinFace == 0) child.genes[i] = genes[i];
+      else child.genes[i] = partner.genes[i];
+    }
+
+    return child;
+  }
+}

@@ -9,8 +9,6 @@ void setup() {
 
   for (DNA dna : population) {
     int n = int(dna.fitness() * 100);
-    println(dna.fitness());
-    println(n);
     for (int j = 0; j < n; j++) {
       matingPool.add(dna);
     }
@@ -26,9 +24,22 @@ void setup() {
   DNA parentA = matingPool.get(parentAIndex);
   DNA parentB = matingPool.get(parentBIndex);
 
-  println("-------");
   println(parentA.fitness());
   println(parentB.fitness());
+
+  println("------");
+  for (char gene : parentA.genes) {
+    print(gene);
+  }
+  println("");
+  for (char gene : parentB.genes) {
+    print(gene);
+  }
+  println("");
+  DNA child = parentA.crossover(parentB);
+  for (char gene : child.genes) {
+    print(gene);
+  }
 }
 
 void draw() {
