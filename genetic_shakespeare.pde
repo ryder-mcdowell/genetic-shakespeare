@@ -40,6 +40,12 @@ void setup() {
   for (char gene : child.genes) {
     print(gene);
   }
+  println("");
+  child.mutate();
+  for (char gene : child.genes) {
+    print(gene);
+  }
+  println("");
 }
 
 void draw() {
